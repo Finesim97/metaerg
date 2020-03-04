@@ -96,7 +96,7 @@ sub cds_diamondSearch{
     my $bls_prefix = "$outdir/$dbname";
     my $blstable = "$bls_prefix\.blasttable";
 
-    my $cmd = "diamond blastp -k 1 --quiet --masking $mask -p $cpus -q $faa -d $db -e $evalue --tmpdir /dev/shm -f 6 qseqid sseqid qlen qstart qend sstart send qframe pident bitscore evalue qcovhsp > $blstable 2> /dev/null";
+    my $cmd = "diamond blastp -k 1 --quiet --masking $mask -p $cpus -q $faa -d $db -e $evalue --tmpdir /dev/shm -f 6 qseqid sseqid qlen qstart qend sstart send qframe pident bitscore evalue qcovhsp > $blstable";
 
 
     #msg("Will use diamond blastp search against $dbname:$cmd");
